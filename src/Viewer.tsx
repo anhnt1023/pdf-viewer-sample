@@ -1,7 +1,9 @@
 import { PrimaryButton, Viewer } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 
-const fileUrl = "/pdf-open-parameters.pdf";
+const fileUrl = import.meta.env.DEV
+  ? "/pdf-open-parameters.pdf"
+  : "https://anhnt1023.github.io/pdf-viewer-sample/pdf-open-parameters.pdf";
 
 export const ReactPDFViewer = () => {
   const defaultLayoutPluginInstance = defaultLayoutPlugin({
